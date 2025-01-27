@@ -1,14 +1,11 @@
 def twos_complement_to_integer():
     """
+    รายชื่อกลุ่ม : 
+    1.กันต์ธร ศิริเจริญวัฒน์ 1650706474
+    2.พรปวีณ์ จิรกุลธนินโชตน์ รหัสนักศึกษา 1650708710
+    3.อนันต์ มิ่งมิตรพัฒนะกุล 1660706688
+
     แปลง binary string ในรูปแบบ Two's Complement เป็นจำนวนเต็ม
-
-    ฟังก์ชันนี้รับ binary string และจำนวนไบต์จากผู้ใช้
-    แล้วแปลงค่า binary string ให้เป็นจำนวนเต็มตามกฎของ Two's Complement
-    พร้อมทั้งจัดการกรณีข้อผิดพลาด เช่น binary string ไม่ถูกต้อง
-    หรือจำนวนบิตไม่ตรงกับจำนวนไบต์ที่ระบุ
-
-    Arguments:
-        ไม่มี (รับอินพุตจากผู้ใช้โดยตรง)
 
     Workflow:
         1. รับ binary string และจำนวนไบต์จากผู้ใช้
@@ -20,9 +17,39 @@ def twos_complement_to_integer():
             - กรณีเลขลบ (Bit ตัวแรก = 1): ใช้กฎ Two's Complement
         6. แสดงผลลัพธ์
 
-    Returns:
-        ไม่มี (แสดงผลลัพธ์หรือข้อผิดพลาดบนหน้าจอ)
+    Test Cases:
+
+    1. เลขบวก:
+        Input:
+            Enter a binary number: 00001111
+            Enter the number of bytes: 1
+        Output:
+            15
+
+    2. เลขติดลบ:
+        Input:
+            Enter a binary number: 11110000
+            Enter the number of bytes: 1
+        Output:
+            -16
+
+
+    3. กรณีข้อผิดพลาด (จำนวนบิตไม่ตรงกับจำนวนไบต์):
+        Input:
+            Enter a binary number: 101010
+            Enter the number of bytes: 1
+        Output:
+            Invalid number of bits. Expected 8 bits.
+
+
+    4. กรณีตัวอักษร (ไม่ใช่เลขฐานสอง):
+        Input:
+            Enter a binary number: 11010AB
+            Enter the number of bytes: 1
+        Output:
+            Please enter a valid binary number (only 0 and 1)
     """
+
     binary_input = input("Enter a binary number: ")
     bytes = int(input("Enter the number of bytes: "))
     if bytes in {1, 2, 4}:
