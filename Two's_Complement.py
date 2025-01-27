@@ -1,5 +1,4 @@
-def twos_complement_to_integer():
-    """
+"""
     รายชื่อกลุ่ม : 
     1.กันต์ธร ศิริเจริญวัฒน์ 1650706474
     2.พรปวีณ์ จิรกุลธนินโชตน์ รหัสนักศึกษา 1650708710
@@ -49,6 +48,8 @@ def twos_complement_to_integer():
         Output:
             Please enter a valid binary number (only 0 and 1)
     """
+
+def twos_complement_to_integer():
 
     binary_input = input("Enter a binary number: ")
     bytes = int(input("Enter the number of bytes: "))
